@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Casa di Toon · Vakantiehuis in Bagni di Lucca, Toscane</title>
+<meta name="description" content="Authentiek Toscaans stenen huis met infinity pool en uitzicht over de heuvels. Gelegen in Bagni di Lucca, op steenworp afstand van Lucca. Direct contact via WhatsApp." />
+<meta property="og:title" content="La Casa di Toon · Toscaans vakantiehuis bij Lucca" />
+<meta property="og:description" content="Stenen huis, infinity pool, sage luiken, en een uitzicht waar je elke ochtend stil van wordt. Bagni di Lucca, Toscane." />
+<meta property="og:image" content="./zwembad.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terracotta:#B85C3F;
+    --terracotta-dark:#8E4128;
+    --olive:#7A8855;
+    --sage:#A8B89A;
+    --cream:#F5EDE0;
+    --paper:#FAF6EE;
+    --ink:#2C1F15;
+    --ink-soft:#5C4A3A;
+    --whatsapp:#25D366;
+    --whatsapp-dark:#128C7E;
+    --shadow:0 30px 60px -20px rgba(44,31,21,.25);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Manrope',-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  .display{
+    font-family:'Fraunces',Georgia,serif;
+    font-weight:400;
+    letter-spacing:-.02em;
+    line-height:1.05;
+  }
+  .display em{font-style:italic;color:var(--terracotta);}
+
+  /* ===== NAV ===== */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:18px 32px;
+    display:flex;justify-content:space-between;align-items:center;
+    background:rgba(250,246,238,.0);
+    transition:background .3s ease, backdrop-filter .3s ease, padding .3s ease;
+  }
+  nav.scrolled{
+    background:rgba(250,246,238,.92);
+    backdrop-filter:blur(12px);
+    padding:12px 32px;
+    box-shadow:0 1px 20px rgba(44,31,21,.06);
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:22px;
+    font-weight:500;
+    font-style:italic;
+    color:var(--paper);
+    transition:color .3s;
+  }
+  nav.scrolled .logo{color:var(--ink);}
+  .logo span{color:var(--terracotta);}
+  .nav-links{display:flex;gap:32px;align-items:center;}
+  .nav-links a{
+    color:var(--paper);
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    transition:color .3s;
+  }
+  nav.scrolled .nav-links a{color:var(--ink);}
+  .nav-links a:hover{color:var(--terracotta);}
+  .nav-cta{
+    background:var(--whatsapp);
+    color:white !important;
+    padding:10px 18px;
+    border-radius:100px;
+    text-transform:none !important;
+    letter-spacing:0 !important;
+    display:flex;align-items:center;gap:6px;
+  }
+  .nav-cta:hover{background:var(--whatsapp-dark);color:white !important;}
+  @media (max-width:768px){
+    .nav-links a:not(.nav-cta){display:none;}
+    nav{padding:14px 18px;}
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    height:100vh;
+    min-height:600px;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-end;
+  }
+  .hero-img{
+    position:absolute;inset:0;
+    background:url('./zwembad.jpg') center/cover;
+    transform:scale(1.05);
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(44,31,21,.35) 0%,rgba(44,31,21,0) 30%,rgba(44,31,21,0) 50%,rgba(44,31,21,.7) 100%);
+  }
+  .hero-content{
+    position:relative;
+    color:var(--paper);
+    padding:0 32px 80px;
+    max-width:1200px;
+    margin:0 auto;
+    width:100%;
+  }
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+    margin-bottom:24px;
+    opacity:.9;
+  }
+  .hero-eyebrow::before{content:"";width:40px;height:1px;background:var(--terracotta);}
+  .hero h1{
+    font-size:clamp(48px,8vw,108px);
+    margin-bottom:24px;
+    max-width:900px;
+  }
+  .hero-sub{
+    font-size:clamp(16px,2vw,20px);
+    max-width:520px;
+    opacity:.9;
+    font-weight:300;
+    margin-bottom:36px;
+  }
+  .hero-buttons{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:16px 28px;
+    border-radius:100px;
+    font-family:'Manrope',sans-serif;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all .3s ease;
+    cursor:pointer;
+    border:none;
+  }
+  .btn-whatsapp{
+    background:var(--whatsapp);
+    color:white;
+  }
+  .btn-whatsapp:hover{
+    background:var(--whatsapp-dark);
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(37,211,102,.35);
+  }
+  .btn-ghost{
+    background:transparent;
+    color:var(--paper);
+    border:1.5px solid rgba(250,246,238,.4);
+  }
+  .btn-ghost:hover{
+    background:var(--paper);
+    color:var(--ink);
+    border-color:var(--paper);
+  }
+  .hero-scroll{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
+    color:var(--paper);
+    font-size:11px;
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    opacity:.7;
+    animation:bob 2.5s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%,100%{transform:translateX(-50%) translateY(0);}
+    50%{transform:translateX(-50%) translateY(8px);}
+  }
+
+  /* ===== SECTION ===== */
+  section{padding:120px 32px;}
+  .container{max-width:1200px;margin:0 auto;}
+  .section-eyebrow{
+    font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--terracotta);
+    font-weight:600;
+    margin-bottom:18px;
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .section-eyebrow::before{content:"";width:30px;height:1px;background:var(--terracotta);}
+
+  /* ===== INTRO ===== */
+  .intro{
+    background:var(--paper);
+    text-align:center;
+    padding:140px 32px;
+  }
+  .intro-quote{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(28px,4vw,48px);
+    line-height:1.25;
+    max-width:850px;
+    margin:0 auto 32px;
+    color:var(--ink);
+  }
+  .intro-quote::before{
+    content:"„";
+    display:block;
+    font-size:80px;
+    color:var(--terracotta);
+    line-height:.5;
+    margin-bottom:20px;
+  }
+  .intro-body{
+    max-width:620px;
+    margin:0 auto;
+    font-size:17px;
+    color:var(--ink-soft);
+  }
+
+  /* ===== SPLIT SECTIONS ===== */
+  .split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+  }
+  .split-img{
+    aspect-ratio:3/4;
+    background-size:cover;
+    background-position:center;
+    border-radius:4px;
+    box-shadow:var(--shadow);
+    position:relative;
+  }
+  .split-img.wide{aspect-ratio:4/3;}
+  .split-text h2{
+    font-size:clamp(36px,5vw,64px);
+    margin-bottom:24px;
+  }
+  .split-text p{
+    font-size:17px;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .split-text p:last-of-type{margin-bottom:0;}
+  .split.reverse .split-img{order:2;}
+  @media (max-width:900px){
+    .split{grid-template-columns:1fr;gap:48px;}
+    .split.reverse .split-img{order:0;}
+  }
+
+  /* ===== HUIS sectie - bohemian Tuscany ===== */
+  .casa{
+    background:linear-gradient(180deg,var(--paper) 0%,var(--cream) 100%);
+  }
+  .casa .split-img{background-image:url('./huis.jpg');}
+
+  /* ===== BINNEN sectie ===== */
+  .binnen{
+    background:var(--cream);
+  }
+  .binnen .split-img{background-image:url('./woonkamer.jpg');}
+
+  /* ===== FEATURES ===== */
+  .features{
+    background:var(--paper);
+    text-align:center;
+  }
+  .features-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:32px;
+    margin-top:60px;
+  }
+  .feature{
+    padding:32px 20px;
+    border-top:1px solid rgba(44,31,21,.12);
+  }
+  .feature-icon{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:48px;
+    color:var(--terracotta);
+    margin-bottom:16px;
+    line-height:1;
+  }
+  .feature h3{
+    font-family:'Fraunces',serif;
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:8px;
+  }
+  .feature p{
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+
+  /* ===== OMGEVING ===== */
+  .omgeving{
+    background:var(--ink);
+    color:var(--paper);
+    padding:140px 32px;
+  }
+  .omgeving .section-eyebrow{color:var(--sage);}
+  .omgeving .section-eyebrow::before{background:var(--sage);}
+  .omgeving-header{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 80px;
+  }
+  .omgeving-header h2{
+    font-size:clamp(36px,5vw,64px);
+    margin-bottom:20px;
+  }
+  .omgeving-header p{
+    color:rgba(250,246,238,.7);
+    font-size:17px;
+  }
+  .places{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:40px;
+  }
+  .place{
+    border-top:1px solid rgba(250,246,238,.15);
+    padding-top:24px;
+  }
+  .place-distance{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    color:var(--terracotta);
+    font-size:14px;
+    margin-bottom:8px;
+  }
+  .place h3{
+    font-family:'Fraunces',serif;
+    font-size:26px;
+    font-weight:500;
+    margin-bottom:12px;
+  }
+  .place p{
+    color:rgba(250,246,238,.7);
+    font-size:15px;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact{
+    background:var(--terracotta);
+    color:var(--paper);
+    text-align:center;
+    padding:140px 32px;
+    position:relative;
+    overflow:hidden;
+  }
+  .contact::before{
+    content:"";
+    position:absolute;
+    top:-50%;left:-10%;
+    width:60%;height:200%;
+    background:radial-gradient(circle, rgba(255,255,255,.08) 0%, transparent 60%);
+    pointer-events:none;
+  }
+  .contact::after{
+    content:"";
+    position:absolute;
+    bottom:-30%;right:-10%;
+    width:50%;height:160%;
+    background:radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 60%);
+    pointer-events:none;
+  }
+  .contact-content{position:relative;z-index:1;max-width:700px;margin:0 auto;}
+  .contact h2{
+    font-size:clamp(40px,6vw,72px);
+    margin-bottom:24px;
+  }
+  .contact p{
+    font-size:18px;
+    margin-bottom:40px;
+    opacity:.95;
+  }
+  .contact .btn-whatsapp{
+    background:var(--paper);
+    color:var(--terracotta-dark);
+    font-size:17px;
+    padding:20px 36px;
+  }
+  .contact .btn-whatsapp:hover{
+    background:white;
+    transform:translateY(-2px);
+    box-shadow:0 16px 40px rgba(0,0,0,.2);
+  }
+  .contact-detail{
+    margin-top:32px;
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:18px;
+    opacity:.9;
+  }
+  .contact-detail a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(250,246,238,.4);}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink);
+    color:rgba(250,246,238,.5);
+    padding:48px 32px;
+    text-align:center;
+    font-size:13px;
+  }
+  footer .display{
+    color:var(--paper);
+    font-size:24px;
+    font-style:italic;
+    margin-bottom:12px;
+  }
+
+  /* ===== FLOATING WHATSAPP ===== */
+  .whatsapp-float{
+    position:fixed;
+    bottom:24px;right:24px;
+    width:60px;height:60px;
+    background:var(--whatsapp);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 30px rgba(37,211,102,.45);
+    z-index:99;
+    transition:all .3s ease;
+    text-decoration:none;
+    animation:pulse 2.5s ease-in-out infinite;
+  }
+  .whatsapp-float:hover{
+    background:var(--whatsapp-dark);
+    transform:scale(1.08);
+  }
+  .whatsapp-float svg{width:32px;height:32px;fill:white;}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 8px 30px rgba(37,211,102,.45), 0 0 0 0 rgba(37,211,102,.5);}
+    50%{box-shadow:0 8px 30px rgba(37,211,102,.45), 0 0 0 16px rgba(37,211,102,0);}
+  }
+
+  /* ===== FADE IN ===== */
+  .reveal{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .8s ease, transform .8s ease;
+  }
+  .reveal.in{opacity:1;transform:none;}
+
+  @media (max-width:768px){
+    section{padding:80px 20px;}
+    .omgeving,.contact,.intro{padding:80px 20px;}
+    .hero-content{padding:0 20px 60px;}
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="logo">La Casa di <span>Toon</span></a>
+  <div class="nav-links">
+    <a href="#het-huis">Het huis</a>
+    <a href="#binnen">Binnen</a>
+    <a href="#omgeving">Omgeving</a>
+    <a href="https://wa.me/31611773913?text=Hoi%20Toon!%20Ik%20zag%20jullie%20huis%20in%20Bagni%20di%20Lucca%20en%20ik%20heb%20een%20vraag." class="nav-cta" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      App Toon
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Bagni di Lucca · Toscane</div>
+    <h1 class="display">Een huis dat naar <em>cipressen</em><br>en lange middagen ruikt.</h1>
+    <p class="hero-sub">Een authentiek stenen huis in de heuvels boven Bagni di Lucca, met een infinity pool die in de horizon verdwijnt en uitzicht waar je nooit op uitgekeken raakt.</p>
+    <div class="hero-buttons">
+      <a href="https://wa.me/31611773913?text=Hoi%20Toon!%20Ik%20zag%20jullie%20huis%20in%20Bagni%20di%20Lucca%20en%20ik%20heb%20een%20vraag." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Stuur Toon een appje
+      </a>
+      <a href="#het-huis" class="btn btn-ghost">Bekijk het huis ↓</a>
+    </div>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="container">
+    <p class="intro-quote reveal">In Toscane gaat de tijd langzamer. Hier ontdek je waarom.</p>
+    <p class="intro-body reveal">Hoog in de groene heuvels van de Garfagnana, op een paar slingerende kilometers van het kuuroordje Bagni di Lucca, staat dit oude stenen huis. Vol karakter, met sage groene luiken, een hortensia bij de voordeur en een zwembad waarin je vergeet wat dag het is. Niet voor wie tien attracties per dag wil afvinken — wél voor wie écht vakantie wil houden.</p>
+  </div>
+</section>
+
+<!-- HET HUIS -->
+<section class="casa" id="het-huis">
+  <div class="container split reverse">
+    <div class="split-img reveal" aria-label="Stenen vakantiehuis met sage groene luiken"></div>
+    <div class="split-text reveal">
+      <div class="section-eyebrow">Het huis</div>
+      <h2 class="display">Eeuwenoud steen, <em>levendig</em> hart.</h2>
+      <p>Een traditioneel Toscaans stenen huis op drie woonlagen, met die typische pastelgroene luiken voor de ramen en een terracotta dak waar de zon overheen rolt. Een blauwe hortensia bij de voordeur die elk seizoen weer overdrijft.</p>
+      <p>Het huis is liefdevol gerenoveerd: de oude details bewaard, het comfort van nu toegevoegd. Lekker geïsoleerd, fijne bedden, alles wat het moet doen — doet het.</p>
+      <p>De toegangsweg komt uit op een privé inrit met parkeerplek. Auto kan dus mee, maar staat na aankomst meestal stil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BINNEN -->
+<section class="binnen" id="binnen">
+  <div class="container split">
+    <div class="split-img reveal" aria-label="Woonkamer met sage groene hoekbank en houtkachel"></div>
+    <div class="split-text reveal">
+      <div class="section-eyebrow">Binnen</div>
+      <h2 class="display">Terracotta vloeren, <em>zachte</em> avonden.</h2>
+      <p>Binnen is het rustig en licht. Witte muren, originele terracotta tegelvloer, ruime hoekbank in dezelfde sage tint als de luiken. Een houtkachel voor de wat frissere avonden in het voor- en naseizoen — en geloof ons, dat is een avond waard.</p>
+      <p>De boekenkast is gevuld, de keuken volledig uitgerust, en bij open ramen waait er een geur van wilde laurier binnen. Wifi is er ook, mocht je écht moeten.</p>
+      <p>Slapen doe je op de bovenverdiepingen, op kamers met uitzicht over de heuvels.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="section-eyebrow" style="justify-content:center;display:inline-flex;">Wat je krijgt</div>
+    <h2 class="display reveal" style="font-size:clamp(32px,4.5vw,52px);margin-top:18px;">De korte versie, voor de scanners.</h2>
+    <div class="features-grid reveal">
+      <div class="feature">
+        <div class="feature-icon">∞</div>
+        <h3>Infinity pool</h3>
+        <p>Privé zwembad met uitzicht over de Apuaanse Alpen. Ja, écht.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">↟</div>
+        <h3>Drie verdiepingen</h3>
+        <p>Ruim huis, meerdere slaapkamers, geschikt voor familie of vriendengroep.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">☼</div>
+        <h3>Tuin & terras</h3>
+        <p>Met parasols, ligbedden en plekken in de schaduw als het te warm wordt.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">♨</div>
+        <h3>Houtkachel</h3>
+        <p>Voor de avonden waarop een glas rood en een knetterend vuur volstaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OMGEVING -->
+<section class="omgeving" id="omgeving">
+  <div class="container">
+    <div class="omgeving-header reveal">
+      <div class="section-eyebrow" style="justify-content:center;display:inline-flex;">De omgeving</div>
+      <h2 class="display">Lucca om de hoek, <em>wildernis</em> achter je.</h2>
+      <p>Bagni di Lucca ligt precies tussen het mondaine Lucca en de bergen van de Garfagnana. Cultuur als je dat wilt, natuur als je dat liever hebt.</p>
+    </div>
+    <div class="places reveal">
+      <div class="place">
+        <div class="place-distance">Direct om de hoek</div>
+        <h3>Bagni di Lucca</h3>
+        <p>Charmant kuuroordje aan de rivier de Lima. Bekend om de thermische bronnen waar zelfs Byron en Shelley graag kwamen. Goeie trattoria's, een handvol cafés.</p>
+      </div>
+      <div class="place">
+        <div class="place-distance">± 30 minuten rijden</div>
+        <h3>Lucca</h3>
+        <p>De stad met de stadsmuur waar je rondheen kunt fietsen. Pleinen, kerken, gelaterías, een Puccini-festival in de zomer. Doe het op de avond.</p>
+      </div>
+      <div class="place">
+        <div class="place-distance">± 1 uur rijden</div>
+        <h3>Pisa & de kust</h3>
+        <p>Pisa voor de toren-selfie en Forte dei Marmi voor een dag aan zee. Beide goed te combineren.</p>
+      </div>
+      <div class="place">
+        <div class="place-distance">± 45 minuten</div>
+        <h3>Garfagnana</h3>
+        <p>Ruige bergstreek, wandelroutes, Grotta del Vento, kastanjebossen. Hier vind je hét Toscane dat de toeristen meestal missen.</p>
+      </div>
+      <div class="place">
+        <div class="place-distance">± 1u15</div>
+        <h3>Cinque Terre</h3>
+        <p>Voor de dag dat je per se gekleurde huizen aan een rotskust wilt. Vroeg vertrekken.</p>
+      </div>
+      <div class="place">
+        <div class="place-distance">± 1u30</div>
+        <h3>Firenze</h3>
+        <p>Voor wie toch een culturele uitspatting wil. Per trein vanuit Lucca makkelijk te doen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-content reveal">
+    <div class="section-eyebrow" style="color:rgba(250,246,238,.9);justify-content:center;display:inline-flex;">Interesse?</div>
+    <h2 class="display" style="color:var(--paper);">Stuur Toon een<br><em style="color:var(--cream);font-style:italic;">berichtje</em>.</h2>
+    <p>Vragen over beschikbaarheid, prijzen, of gewoon nieuwsgierig? Eén appje en je krijgt persoonlijk antwoord — geen geautomatiseerd formulier, geen wachtrij. Beloofd.</p>
+    <a href="https://wa.me/31611773913?text=Hoi%20Toon!%20Ik%20zag%20jullie%20huis%20in%20Bagni%20di%20Lucca%20en%20ik%20heb%20een%20vraag." class="btn btn-whatsapp" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Open WhatsApp
+    </a>
+    <div class="contact-detail">of bel: <a href="tel:+31611773913">+31 6 11 77 39 13</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="display">La Casa di Toon</div>
+  <div>Bagni di Lucca · Toscane · Italia</div>
+  <div style="margin-top:14px;">© <span id="year"></span> · Een huis vol Italiaanse zon</div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/31611773913?text=Hoi%20Toon!%20Ik%20zag%20jullie%20huis%20in%20Bagni%20di%20Lucca%20en%20ik%20heb%20een%20vraag." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.768.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+
+  // Reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

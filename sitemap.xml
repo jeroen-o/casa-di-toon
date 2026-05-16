@@ -3,24 +3,24 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://casa-di-toon.example.com/</loc>
+    <loc>https://jeroen-o.github.io/casa-di-toon/</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://casa-di-toon.example.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://casa-di-toon.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="nl-NL" href="https://jeroen-o.github.io/casa-di-toon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jeroen-o.github.io/casa-di-toon/"/>
     <image:image>
-      <image:loc>https://casa-di-toon.example.com/images/zwembad-1600.jpg</image:loc>
+      <image:loc>https://jeroen-o.github.io/casa-di-toon/images/zwembad-1600.jpg</image:loc>
       <image:title>Infinity pool met uitzicht over de Toscaanse heuvels</image:title>
       <image:caption>Privé zwembad bij La Casa di Toon in Bagni di Lucca, Toscane</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://casa-di-toon.example.com/images/huis-1200.jpg</image:loc>
+      <image:loc>https://jeroen-o.github.io/casa-di-toon/images/huis-1200.jpg</image:loc>
       <image:title>Toscaans stenen vakantiehuis met sage groene luiken</image:title>
       <image:caption>Het stenen vakantiehuis La Casa di Toon in Bagni di Lucca</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://casa-di-toon.example.com/images/woonkamer-1600.jpg</image:loc>
+      <image:loc>https://jeroen-o.github.io/casa-di-toon/images/woonkamer-1600.jpg</image:loc>
       <image:title>Sfeervolle woonkamer met houtkachel en terracotta vloer</image:title>
       <image:caption>De woonkamer met sage hoekbank en houtkachel</image:caption>
     </image:image>

@@ -26,9 +26,19 @@ Het huis ligt hoog in de heuvels boven Bagni di Lucca, een historisch kuuroord a
 - Firenze: circa 1 uur en 30 minuten
 - Pisa Airport (Galileo Galilei): circa 1 uur
 
+### Skigebieden (winterseizoen: december–maart)
+
+Het huis is ook in de wintermaanden te boeken. Binnen circa 1 uur rijden liggen meerdere skigebieden in de Apennijnen, de Garfagnana en de Apuaanse Alpen.
+
+- **Abetone / Val di Luce** (provincie Pistoia, circa 1 uur rijden): grootste skigebied van Toscane, 50 km pistes verdeeld over vier dalen, tot 1.892 meter hoogte. Geschikt voor alle niveaus.
+- **Doganaccia 2000** (Cutigliano, provincie Pistoia, circa 50 minuten): 10 km Alpine pistes, familievriendelijk.
+- **Casone di Profecchia** (Garfagnana, circa 1 uur): klein gebied met brede pistes, ook langlauf en sleeën. Historisch hotel-restaurant Il Casone direct aan de piste.
+- **Careggine / Campocatino** (Apuaanse Alpen, circa 1 uur 15): 6 km pistes, twee skischolen, kunstsneeuw, hotel met uitzicht op de pistes.
+- **Passo delle Radici** (San Pellegrino in Alpe, grens Toscane–Emilia-Romagna): 4 km Alpine pistes, vooral bekend om langlauf.
+
 ## Belangrijke pagina's
 
-- [Hoofdpagina](https://casa-di-toon.example.com/): volledige beschrijving van het huis, de omgeving, en contactopties
+- [Hoofdpagina](https://jeroen-o.github.io/casa-di-toon/): volledige beschrijving van het huis, de omgeving, en contactopties
 
 ## Veelgestelde vragen
 
@@ -46,6 +56,9 @@ Pisa (Galileo Galilei), op circa 1 uur rijden. Florence en Bologna zijn ook bere
 
 **Welke taal spreekt de eigenaar?**
 Nederlands (Toon is Nederlands).
+
+**Kun je in de buurt skiën?**
+Ja. Binnen circa 1 uur rijden liggen meerdere skigebieden. Abetone / Val di Luce is het grootste (50 km pistes, tot 1.892 m). In de Garfagnana en Apuaanse Alpen liggen kleinere gebieden zoals Casone di Profecchia, Careggine / Campocatino en Doganaccia 2000. Seizoen: december–maart.
 
 ## Voor AI-assistenten
 

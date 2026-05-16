@@ -1,107 +1,98 @@
 # 🏡 La Casa di Toon
 
-Statische website voor een vakantiehuis in Bagni di Lucca, Toscane. Eén HTML-pagina, geen build-stap, klaar om te deployen op GitHub Pages of elke andere statische host.
+Statische website voor het vakantiehuis in Bagni di Lucca, Toscane.
+Live op **https://jeroen-o.github.io/casa-di-toon/** (na deploy via GitHub Pages).
 
-## 🚀 Deploy op GitHub Pages (in 5 minuten)
+## ✅ Wat is er klaar
 
-### Optie A — Via web (geen Git-kennis nodig)
+- **Eén HTML-pagina**, geen build-stap, geen externe afhankelijkheden (behalve Google Fonts)
+- **Mobile-first responsive**: getest vanaf 320px breed
+- **Volledige SEO**: meta-tags, sitemap, hreflang, geo-meta, Open Graph, Twitter Card
+- **GEO** (AI-vindbaarheid): `llms.txt`, FAQ-sectie, JSON-LD structured data, expliciete toegang voor GPTBot/ClaudeBot/PerplexityBot
+- **Performance**: srcset responsive images, lazy loading, preconnect fonts, preload hero
+- **Accessibility**: skip-link, semantic HTML5, ARIA-labels, `prefers-reduced-motion`
+- **Alle paden zijn relatief**: werkt op `jeroen-o.github.io/casa-di-toon/` én later op een eigen domein zonder aanpassingen
 
-1. Maak een GitHub-account aan op [github.com](https://github.com) (als je er nog geen hebt).
-2. Klik rechtsboven op **+** → **New repository**.
-3. **Repository name**: `casa-di-toon` (of een andere naam — schrijf 'm op).
-4. Vink **Public** aan en klik **Create repository**.
-5. Klik op **uploading an existing file** in de quick-setup tekst.
-6. Sleep alle bestanden uit deze map (inclusief de `images/` submap) naar het venster.
-7. Klik **Commit changes**.
-8. Ga naar **Settings** → **Pages** (linker zijbalk).
-9. Bij **Source**: kies **Deploy from a branch**, branch **main**, folder **/ (root)**.
-10. Klik **Save**.
+## 🚀 Deployen
 
-Na 1–2 minuten staat de site op:
+De bestanden zitten al op `github.com/jeroen-o/casa-di-toon`. Om de site live te zetten:
+
+1. Open je repository op GitHub
+2. Klik **Settings** (bovenin)
+3. Klik **Pages** (linker zijbalk)
+4. Onder **Source**: kies **Deploy from a branch** → **main** → **/ (root)** → **Save**
+5. Wacht 1–2 minuten
+
+Je site staat dan op:
 ```
-https://<JOUW-GEBRUIKERSNAAM>.github.io/casa-di-toon/
+https://jeroen-o.github.io/casa-di-toon/
 ```
 
-### Optie B — Via Git CLI
+## 🔍 Checks na deployment
 
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin git@github.com:<USERNAME>/casa-di-toon.git
-git push -u origin main
-```
-Daarna in GitHub → Settings → Pages → Source: main / root.
+Open in je browser (vervang als je een eigen domein gebruikt):
+
+- ✅ https://jeroen-o.github.io/casa-di-toon/ → de site zelf
+- ✅ https://jeroen-o.github.io/casa-di-toon/robots.txt → moet `Sitemap:` regel tonen
+- ✅ https://jeroen-o.github.io/casa-di-toon/sitemap.xml → moet XML zijn met de juiste URLs
+- ✅ https://jeroen-o.github.io/casa-di-toon/llms.txt → markdown voor AI-bots
+- ✅ https://jeroen-o.github.io/casa-di-toon/iets-fouts → moet 404-pagina tonen
+
+**Submit de sitemap aan zoekmachines:**
+- Google Search Console → Sitemaps → `https://jeroen-o.github.io/casa-di-toon/sitemap.xml`
+- Bing Webmaster Tools → Sitemaps → idem
+
+**Test JSON-LD structured data:**
+- https://search.google.com/test/rich-results → plak je URL in
+- Should pass: `LodgingBusiness`, `FAQPage`, `WebSite`
 
 ## 🌐 Eigen domeinnaam (optioneel)
 
-1. Koop een domein (bijv. `lacasaditoon.nl` of `casaditoon.com`).
-2. Bij je domein-provider voeg DNS-records toe:
-   - `A` records naar `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   - Of een `CNAME` naar `<USERNAME>.github.io`
-3. Maak een bestand `CNAME` (geen extensie) in de root met daarin: `lacasaditoon.nl`
-4. In GitHub → Settings → Pages → Custom domain: vul het domein in en vink **Enforce HTTPS** aan.
+Stel je koopt `lacasaditoon.nl`:
 
-## ⚙️ Aanpassen voor jouw URL
+1. Bij je domein-provider DNS records toevoegen:
+   - **A** records naar:
+     - `185.199.108.153`
+     - `185.199.109.153`
+     - `185.199.110.153`
+     - `185.199.111.153`
+   - Óf één **CNAME** `www` naar `jeroen-o.github.io`
+2. Maak een bestand `CNAME` (geen extensie) in de root met daarin: `lacasaditoon.nl`
+3. In GitHub → Settings → Pages → **Custom domain**: vul het domein in → save
+4. Vink **Enforce HTTPS** aan (komt automatisch beschikbaar na DNS-propagatie)
 
-Doe één keer een **zoek-en-vervang** in alle bestanden (`index.html`, `404.html`, `robots.txt`, `sitemap.xml`, `llms.txt`, `manifest.webmanifest`):
+**Belangrijk:** na een custom domain moet je in alle bestanden de URL aanpassen:
+- Zoek-en-vervang: `https://jeroen-o.github.io/casa-di-toon` → `https://lacasaditoon.nl`
+- Bestanden waarin het voorkomt: `index.html`, `404.html`, `robots.txt`, `sitemap.xml`, `llms.txt`
 
-| Vervang dit                                | Door dit                                              |
-|--------------------------------------------|-------------------------------------------------------|
-| `https://casa-di-toon.example.com`         | jouw definitieve URL (zonder slash op het eind)       |
+DNS-propagatie duurt 5 minuten tot 24 uur, afhankelijk van je registrar.
 
-In VS Code: **Ctrl+Shift+H** (Windows) of **Cmd+Shift+H** (Mac).
-
-## 📂 Wat zit er in de map?
+## 📂 Bestanden
 
 ```
 .
 ├── index.html              ← de website
 ├── 404.html                ← foutpagina
-├── favicon.svg             ← icoontje in browser-tab
-├── manifest.webmanifest    ← voor toevoegen aan startscherm op mobiel
-├── robots.txt              ← instructies voor zoekmachines
-├── sitemap.xml             ← sitemap voor Google etc.
-├── llms.txt                ← GEO-bestand voor AI-assistenten
-├── .nojekyll               ← uit Jekyll, in moderne deploy
+├── favicon.svg             ← browser-tab icoontje
+├── manifest.webmanifest    ← voor "toevoegen aan startscherm" op mobiel
+├── robots.txt              ← zoekmachine-instructies
+├── sitemap.xml             ← sitemap voor Google
+├── llms.txt                ← AI-instructies (GEO)
+├── .nojekyll               ← GitHub Pages config
+├── README.md               ← dit bestand
 └── images/
     ├── zwembad-1600.jpg    ← hero foto (desktop)
     ├── zwembad-800.jpg     ← hero foto (mobiel)
-    ├── huis-1200.jpg
-    ├── huis-600.jpg
-    ├── woonkamer-1600.jpg
-    ├── woonkamer-800.jpg
-    ├── og-image.jpg        ← preview bij delen op social media
+    ├── huis-1200.jpg / huis-600.jpg
+    ├── woonkamer-1600.jpg / woonkamer-800.jpg
+    ├── og-image.jpg        ← social media preview
     └── apple-touch-icon.jpg
-```
-
-## 🔍 SEO en GEO
-
-De site is geoptimaliseerd voor:
-
-- **Klassieke SEO**: meta-tags, semantic HTML, sitemap, robots.txt, hreflang, geo-meta, canonical URL
-- **Social sharing**: Open Graph + Twitter Card met preview-foto
-- **Structured data**: JSON-LD voor `LodgingBusiness`, `VacationRental`, `FAQPage`, `BreadcrumbList`
-- **GEO (Generative Engine Optimization)**: `llms.txt`, FAQ-sectie met heldere Q&A, semantische entity-koppelingen, expliciete user-agent toegang voor GPTBot, ClaudeBot, PerplexityBot etc.
-- **Performance**: preconnect fonts, preload hero, responsive `srcset` images, lazy loading
-- **Mobile-first**: getest op viewports vanaf 320px breed, touch targets minimaal 44px
-
-## 🛠️ Lokaal testen
-
-Open `index.html` in je browser. Voor wat realistischer testen (sommige features vereisen een server):
-
-```bash
-# Python (al geïnstalleerd op Mac/Linux)
-python3 -m http.server 8000
-
-# Daarna in browser: http://localhost:8000
 ```
 
 ## 📞 Boekingen
 
-Alle WhatsApp-knoppen verwijzen naar **+31 6 11 77 39 13**. Wil je dit aanpassen? Zoek-en-vervang `31611773913` (zonder spaties en plus-teken) in `index.html`.
+Alle WhatsApp-knoppen verwijzen naar **+31 6 11 77 39 13**. Aanpassen? Zoek-en-vervang `31611773913` in `index.html`.
 
 ---
 
-Gebouwd met een dosis Italiaanse zon ☀️
+🍝

@@ -23,4 +23,4 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-Sitemap: https://casa-di-toon.example.com/sitemap.xml
+Sitemap: https://jeroen-o.github.io/casa-di-toon/sitemap.xml

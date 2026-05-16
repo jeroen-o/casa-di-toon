@@ -12,9 +12,9 @@
 <meta name="author" content="La Casa di Toon">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#B85C3F">
-<link rel="canonical" href="https://casa-di-toon.example.com/">
-<link rel="alternate" hreflang="nl-NL" href="https://casa-di-toon.example.com/">
-<link rel="alternate" hreflang="x-default" href="https://casa-di-toon.example.com/">
+<link rel="canonical" href="https://jeroen-o.github.io/casa-di-toon/">
+<link rel="alternate" hreflang="nl-NL" href="https://jeroen-o.github.io/casa-di-toon/">
+<link rel="alternate" hreflang="x-default" href="https://jeroen-o.github.io/casa-di-toon/">
 
 <!-- ============ GEO META ============ -->
 <meta name="geo.region" content="IT-52">
@@ -27,8 +27,8 @@
 <meta property="og:site_name" content="La Casa di Toon">
 <meta property="og:title" content="La Casa di Toon · Toscaans vakantiehuis met infinity pool">
 <meta property="og:description" content="Authentiek stenen huis in de heuvels van Bagni di Lucca, met privé pool en uitzicht over de Apuaanse Alpen. Boek persoonlijk via WhatsApp.">
-<meta property="og:url" content="https://casa-di-toon.example.com/">
-<meta property="og:image" content="https://casa-di-toon.example.com/images/og-image.jpg">
+<meta property="og:url" content="https://jeroen-o.github.io/casa-di-toon/">
+<meta property="og:image" content="https://jeroen-o.github.io/casa-di-toon/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Infinity pool met uitzicht over de heuvels van Bagni di Lucca">
@@ -38,7 +38,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="La Casa di Toon · Toscaans vakantiehuis in Bagni di Lucca">
 <meta name="twitter:description" content="Stenen huis, infinity pool, sage luiken. In de heuvels boven Bagni di Lucca, op 30 minuten van Lucca.">
-<meta name="twitter:image" content="https://casa-di-toon.example.com/images/og-image.jpg">
+<meta name="twitter:image" content="https://jeroen-o.github.io/casa-di-toon/images/og-image.jpg">
 
 <!-- ============ ICONS & MANIFEST ============ -->
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -58,15 +58,15 @@
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "additionalType": "https://schema.org/VacationRental",
-  "@id": "https://casa-di-toon.example.com/#lodging",
+  "@id": "https://jeroen-o.github.io/casa-di-toon/#lodging",
   "name": "La Casa di Toon",
   "alternateName": "Casa di Toon",
   "description": "Authentiek Toscaans stenen vakantiehuis met privé infinity pool in Bagni di Lucca, op circa 30 minuten van Lucca.",
-  "url": "https://casa-di-toon.example.com/",
+  "url": "https://jeroen-o.github.io/casa-di-toon/",
   "image": [
-    "https://casa-di-toon.example.com/images/zwembad-1600.jpg",
-    "https://casa-di-toon.example.com/images/huis-1200.jpg",
-    "https://casa-di-toon.example.com/images/woonkamer-1600.jpg"
+    "https://jeroen-o.github.io/casa-di-toon/images/zwembad-1600.jpg",
+    "https://jeroen-o.github.io/casa-di-toon/images/huis-1200.jpg",
+    "https://jeroen-o.github.io/casa-di-toon/images/woonkamer-1600.jpg"
   ],
   "telephone": "+31611773913",
   "priceRange": "€€",
@@ -104,7 +104,14 @@
     { "@type": "LocationFeatureSpecification", "name": "Volledig uitgeruste keuken", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Tuin", "value": true },
     { "@type": "LocationFeatureSpecification", "name": "Terras met parasols", "value": true },
-    { "@type": "LocationFeatureSpecification", "name": "Privé parkeerplaats", "value": true }
+    { "@type": "LocationFeatureSpecification", "name": "Privé parkeerplaats", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "Skigebieden binnen 1 uur rijden", "value": true }
+  ],
+  "nearbyAttractions": [
+    { "@type": "TouristAttraction", "name": "Abetone / Val di Luce skigebied", "description": "Het grootste skigebied van Toscane, 50 km pistes tot 1.892 meter, op circa 1 uur rijden." },
+    { "@type": "TouristAttraction", "name": "Doganaccia 2000 (Cutigliano)", "description": "Skigebied in de provincie Pistoia met 10 km pistes, circa 50 minuten rijden." },
+    { "@type": "TouristAttraction", "name": "Casone di Profecchia", "description": "Klein skigebied in de Garfagnana, geschikt voor families en beginners." },
+    { "@type": "TouristAttraction", "name": "Careggine / Campocatino", "description": "Skigebied in de Apuaanse Alpen met 6 km pistes en kunstsneeuw." }
   ],
   "potentialAction": {
     "@type": "ReserveAction",
@@ -178,6 +185,14 @@
     },
     {
       "@type": "Question",
+      "name": "Kun je in de buurt ook skiën?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Binnen circa 1 uur rijden liggen meerdere skigebieden. Abetone / Val di Luce is het grootste met 50 km pistes tot 1.892 meter hoogte. Dichterbij in de Garfagnana en de Apuaanse Alpen liggen kleinere gebieden zoals Casone di Profecchia, Careggine / Campocatino en Doganaccia 2000 bij Cutigliano. Het skiseizoen loopt globaal van december tot maart."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Wat kost een week verblijf?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -193,7 +208,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://casa-di-toon.example.com/",
+  "url": "https://jeroen-o.github.io/casa-di-toon/",
   "name": "La Casa di Toon",
   "inLanguage": "nl-NL",
   "description": "Privé Toscaans vakantiehuis met infinity pool in Bagni di Lucca."
@@ -398,6 +413,49 @@
   .place h3{font-family:'Fraunces',serif;font-size:24px;font-weight:500;margin-bottom:10px;}
   @media (min-width:801px){.place h3{font-size:26px;margin-bottom:12px;}}
   .place p{color:rgba(250,246,238,.7);font-size:15px;}
+
+  /* ============ WINTER / SKI ============ */
+  .winter{background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%);padding:70px 20px;}
+  @media (min-width:801px){.winter{padding:120px 32px;}}
+  .winter-header{text-align:center;max-width:720px;margin:0 auto 48px;}
+  @media (min-width:801px){.winter-header{margin-bottom:64px;}}
+  .winter-header h2{font-size:clamp(30px,5vw,58px);margin-bottom:18px;}
+  .winter-header p{color:var(--ink-soft);font-size:16px;}
+  @media (min-width:801px){.winter-header p{font-size:17px;}}
+  .ski-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:28px;
+  }
+  @media (min-width:801px){.ski-grid{gap:36px;}}
+  .ski-card{
+    background:var(--paper);
+    border-top:3px solid var(--terracotta);
+    padding:24px 22px;
+    border-radius:0 0 4px 4px;
+    box-shadow:0 8px 20px -10px rgba(44,31,21,.15);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .ski-card .ski-meta{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    font-family:'Fraunces',serif;font-style:italic;font-size:13px;
+    color:var(--terracotta);
+  }
+  .ski-card h3{
+    font-family:'Fraunces',serif;font-size:24px;font-weight:500;color:var(--ink);
+    margin:4px 0 2px;
+  }
+  @media (min-width:801px){.ski-card h3{font-size:26px;}}
+  .ski-card p{color:var(--ink-soft);font-size:15px;margin:0;}
+  .ski-card .ski-stats{
+    margin-top:auto;padding-top:14px;
+    border-top:1px solid rgba(44,31,21,.1);
+    display:flex;flex-wrap:wrap;gap:14px;
+    font-size:13px;color:var(--ink-soft);
+  }
+  .ski-card .ski-stats span{
+    display:inline-flex;align-items:center;gap:5px;
+  }
+  .ski-card .ski-stats strong{color:var(--ink);font-weight:600;}
 
   /* ============ FAQ (GEO!) ============ */
   .faq{background:var(--paper);padding:70px 20px;}
@@ -625,6 +683,72 @@
   </div>
 </section>
 
+<!-- ============ WINTERSPORT / SKI ============ -->
+<section class="winter" id="skien" aria-labelledby="winter-titel">
+  <div class="container">
+    <div class="winter-header reveal">
+      <p class="section-eyebrow center">In de winter</p>
+      <h2 class="display" id="winter-titel">Skiën in <em>Toscane</em>. Ja, écht.</h2>
+      <p>Het huis is ook in de wintermaanden te boeken. Binnen een uur rijden vind je verrassend fijne skigebieden in de Apennijnen en de Apuaanse Alpen — minder druk dan de Alpen, vriendelijker geprijsd, en met dat onmiskenbaar Italiaanse aprés-skigevoel. Lees: een knetterend vuur en een glas Sangiovese na afloop.</p>
+    </div>
+    <div class="ski-grid reveal">
+
+      <article class="ski-card">
+        <div class="ski-meta">
+          <span>± 1 uur rijden</span>
+          <span>Pistoia</span>
+        </div>
+        <h3>Abetone / Val di Luce</h3>
+        <p>Het grootste skigebied van Toscane en hét wintersportoord van Midden-Italië. Pistes voor alle niveaus, brede afdalingen, goed restaurantaanbod in het dorp.</p>
+        <div class="ski-stats">
+          <span><strong>50 km</strong> pistes</span>
+          <span>tot <strong>1.892 m</strong></span>
+        </div>
+      </article>
+
+      <article class="ski-card">
+        <div class="ski-meta">
+          <span>± 50 minuten</span>
+          <span>Cutigliano</span>
+        </div>
+        <h3>Doganaccia 2000</h3>
+        <p>Knus skigebied in de provincie Pistoia met afdalingen voor beginners en gevorderden. Goed voor families, mooi panorama, ook fijn om te wandelen.</p>
+        <div class="ski-stats">
+          <span><strong>10 km</strong> pistes</span>
+          <span>familievriendelijk</span>
+        </div>
+      </article>
+
+      <article class="ski-card">
+        <div class="ski-meta">
+          <span>± 1 uur rijden</span>
+          <span>Garfagnana</span>
+        </div>
+        <h3>Casone di Profecchia</h3>
+        <p>Klein gebied met brede pistes en weinig drukte. Historisch hotel-restaurant Il Casone direct aan de piste. Ook langlaufroutes en sleeën mogelijk.</p>
+        <div class="ski-stats">
+          <span>ski + <strong>langlauf</strong></span>
+          <span>beginners</span>
+        </div>
+      </article>
+
+      <article class="ski-card">
+        <div class="ski-meta">
+          <span>± 1 uur 15</span>
+          <span>Apuaanse Alpen</span>
+        </div>
+        <h3>Careggine / Campocatino</h3>
+        <p>Twee skischolen, hotel met direct uitzicht op de pistes. Kunstsneeuw zorgt voor een betrouwbaar seizoen. Ideaal voor kinderen en wie net begint.</p>
+        <div class="ski-stats">
+          <span><strong>6 km</strong> pistes</span>
+          <span>kunstsneeuw</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <!-- ============ FAQ (GEO) ============ -->
 <section class="faq" id="faq" aria-labelledby="faq-titel">
   <div class="container">
@@ -641,6 +765,7 @@
       <details class="faq-item"><summary>Welke taal spreekt de eigenaar?</summary><div class="faq-answer">Nederlands. Toon, de eigenaar, is Nederlands. Communicatie kan ook in het Engels.</div></details>
       <details class="faq-item"><summary>Wat is er in de omgeving te doen?</summary><div class="faq-answer">Bagni di Lucca biedt thermische bronnen, goede trattoria's en een handvol cafés. Lucca op 30 minuten heeft cultuur, pleinen en het Puccini-festival. Pisa en Forte dei Marmi liggen op 1 uur. De Garfagnana is op 45 minuten voor wandelen, Grotta del Vento en kastanjebossen. Cinque Terre is 1u15, Firenze 1u30.</div></details>
       <details class="faq-item"><summary>Is er een privé parkeerplaats?</summary><div class="faq-answer">Ja. De toegangsweg eindigt op een privé inrit bij het huis. Een auto is handig om de omgeving te ontdekken, maar staat na aankomst meestal stil.</div></details>
+      <details class="faq-item"><summary>Kun je in de buurt ook skiën?</summary><div class="faq-answer">Ja. Binnen circa 1 uur rijden liggen meerdere skigebieden. <strong>Abetone / Val di Luce</strong> is het grootste met 50 km pistes tot 1.892 meter hoogte. Dichterbij in de Garfagnana en de Apuaanse Alpen liggen kleinere gebieden zoals <strong>Casone di Profecchia</strong>, <strong>Careggine / Campocatino</strong> en <strong>Doganaccia 2000</strong> bij Cutigliano. Het skiseizoen loopt globaal van december tot maart.</div></details>
       <details class="faq-item"><summary>Wat kost een week verblijf?</summary><div class="faq-answer">De prijzen verschillen per seizoen. Vraag actuele prijzen en beschikbaarheid op via WhatsApp bij Toon op +31 6 11 77 39 13.</div></details>
     </div>
   </div>

@@ -1,0 +1,24 @@
+{
+  "name": "La Casa di Toon",
+  "short_name": "Casa di Toon",
+  "description": "Toscaans vakantiehuis met infinity pool in Bagni di Lucca",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#F5EDE0",
+  "theme_color": "#B85C3F",
+  "lang": "nl-NL",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/apple-touch-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#F5EDE0"/>
+  <!-- huis -->
+  <path d="M14 30 L32 16 L50 30 L50 50 L14 50 Z" fill="#B85C3F"/>
+  <!-- dakrand -->
+  <path d="M12 31 L32 15 L52 31" stroke="#8E4128" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- raam links -->
+  <rect x="20" y="34" width="8" height="9" fill="#7A8855"/>
+  <!-- raam rechts -->
+  <rect x="36" y="34" width="8" height="9" fill="#7A8855"/>
+  <!-- deur -->
+  <rect x="28" y="42" width="8" height="8" fill="#2C1F15"/>
+</svg>
